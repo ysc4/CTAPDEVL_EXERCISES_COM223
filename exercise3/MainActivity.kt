@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private val validUsername = "username01"
     private val validPassword = "name@123"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val enteredUsername = usernameInput.text.toString()
             val enteredPassword = passwordInput.text.toString()
 
-            if (enteredUsername == validUsername && enteredPassword == validPassword) {
+            if (enteredPassword == validPassword) {
                 val intent = Intent(this, Homepage::class.java)
                 intent.putExtra("USERNAME", enteredUsername)
                 startActivity(intent)
